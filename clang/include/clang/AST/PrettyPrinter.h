@@ -371,6 +371,10 @@ struct PrintingPolicy {
   LLVM_PREFERRED_TYPE(bool)
   unsigned SuppressDeclAttributes : 1;
 
+  /// Whether to suppress printing the body of a lambda.
+  LLVM_PREFERRED_TYPE(bool)
+  unsigned SuppressLambdaBody : 1;
+
   /// Callbacks to use to allow the behavior of printing to be customized.
   const PrintingCallbacks *Callbacks = nullptr;
 };
